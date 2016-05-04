@@ -12,3 +12,6 @@ instance IsString (Maybe URI) where
 
 instance IsString Regex where
     fromString = mkRegex
+
+class IsLiteral a where
+    fromStringRep :: String -> Either String a
